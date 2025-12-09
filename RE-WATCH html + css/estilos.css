@@ -1,0 +1,87 @@
+
+body{
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "poppins", sans-serif;
+    }
+
+
+#contenedor{
+  width: 95%;
+  max-width: 1300px;
+  margin:auto;}
+
+
+#isotipo {
+         width: 200px;
+         height:auto;
+         display: block; 
+         margin: 0 auto;
+}
+
+#fox {
+    float: left;
+    margin:0rem 1rem 0rem 2rem;
+    width:300px ;
+    height:auto;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+}
+
+#titulopelicula { 
+                font-weight: bold;
+                font-size: 50px;
+                margin-bottom: 0rem;
+                padding-left: 1rem;
+                margin-top: 0rem;
+                padding-top: 0rem;
+                padding-right: 1rem;
+      
+}
+
+#director { 
+                font-size: 25px;
+                margin-bottom: 0rem;
+                margin-top: 0rem;
+                padding-left: 1rem;
+}
+
+#año { 
+                font-size: 25px;
+                margin-bottom: 0rem;
+                padding-left: 1rem;
+}
+
+#duracion { 
+                font-size: 25px;
+                margin-left: 1rem;
+                margin-bottom: 0rem;
+                padding-left: 1rem;
+}
+#generos { 
+                font-size: 25px;
+                margin-bottom: 0rem;
+                padding-left: 1rem;
+}
+
+#sinopsis{ 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        clear: both;
+        text-align: justify;
+        padding-left: 1.5rem;
+        padding-bottom: 1rem;
+}
+
+
+#final {
+  background-color: rgb(221, 221, 221);
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+
+@media screen and (min-width:850px)
