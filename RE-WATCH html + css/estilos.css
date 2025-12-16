@@ -1,24 +1,51 @@
 
-body{
-    font-family: "poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-family: "poppins", sans-serif;
-    }
-
-
 #contenedor{
   width: 95%;
   max-width: 1300px;
   margin:auto;}
 
+@media screen and (min-width: 850px){
+       article {width: 80%;}
+}
 
-#isotipo {
-         width: 200px;
+
+
+body{
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "poppins", sans-serif;
+    background-color: black;
+    color: #f8f7f5;
+    }
+
+
+
+.isotipo {
+         width: 250px;
          height:auto;
          display: block; 
          margin: 0 auto;
+         align-items: center;
 }
+
+.logotipo {display: none;
+            align-items: center;}
+
+
+@media screen and (min-width: 850px){
+       .isotipo {display: none;}
+       
+       .logotipo {display: block;
+                  width: 420px;
+                  height:auto;
+                  margin-left: auto;
+                  margin-right: auto;
+                  padding-top: 3rem;
+                  padding-bottom: 4rem;
+      }
+      }
+
 
 #fox {
     float: left;
@@ -84,4 +111,4 @@ body{
 }
 
 
-@media screen and (min-width:850px)
+
