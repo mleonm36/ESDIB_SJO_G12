@@ -1,0 +1,198 @@
+
+body{
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "poppins", sans-serif;
+    }
+
+
+#contenedor{
+  width: 95%;
+  max-width: 1300px;
+  margin:auto;}
+
+
+#isotipo {
+         width: 200px;
+         height:auto;
+         display: block; 
+         margin: 0 auto;
+}
+
+#fox {
+    float: left;
+    margin:0rem 1rem 0rem 2rem;
+    width:300px ;
+    height:auto;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+}
+
+#titulopelicula { 
+                font-weight: bold;
+                font-size: 50px;
+                margin-bottom: 0rem;
+                padding-left: 1rem;
+                margin-top: 0rem;
+                padding-top: 0rem;
+                padding-right: 1rem;
+      
+}
+
+#director { 
+                font-size: 25px;
+                margin-bottom: 0rem;
+                margin-top: 0rem;
+                padding-left: 1rem;
+}
+
+#año { 
+                font-size: 25px;
+                margin-bottom: 0rem;
+                padding-left: 1rem;
+}
+
+#duracion { 
+                font-size: 25px;
+                margin-left: 1rem;
+                margin-bottom: 0rem;
+                padding-left: 1rem;
+}
+#generos { 
+                font-size: 25px;
+                margin-bottom: 0rem;
+                padding-left: 1rem;
+}
+
+#sinopsis{ 
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        clear: both;
+        text-align: justify;
+        padding-left: 1.5rem;
+        padding-bottom: 1rem;
+}
+
+
+#final {
+  background-color: rgb(221, 221, 221);
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+
+.contenedor-barra-busqueda {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.activador-menu {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    padding: 5px;
+}
+
+.input-busqueda {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1rem;
+}
+
+.input-busqueda:focus {
+    outline: none;
+    border-color: var(--main-color);
+    background: rgba(0, 0, 0, 0.8);
+
+}
+
+.buscador {
+  padding: 0 25px 0 200px; /* Padding for other horizontal elements */
+}
+
+.barra-lateral {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    /* Hidden by default */
+    width: 250px;
+    height: 100vh;
+    background: #000;
+    z-index: 200;
+    transition: left 0.3s ease;
+    padding: 20px;
+    padding-bottom: 100px;
+    /* Ensure content isn't cut off */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    /* Prevent scroll chaining */
+}
+
+.barra-lateral.open {
+    left: 0;
+}
+
+.cabecera-barra-lateral {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.boton-cerrar {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-barra-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.boton-nav {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 12px;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    display: block;
+}
+
+.boton-nav:hover {
+    background: #444;
+    color: var(--main-color);
+}
+
+.divisor-barra-lateral {
+    height: 1px;
+    background: #333;
+    margin: 20px 0;
+}
+
+
+
+
+@media screen and (min-width:850px)
