@@ -8,7 +8,6 @@
        article {width: 80%;}
 }
 
-
 body{
     font-family: "poppins", sans-serif;
     font-weight: 400;
@@ -17,6 +16,11 @@ body{
     background-color: black;
     color: #f8f7f5;
     }
+
+ .menu-busqueda { /* O el nombre de tu clase contenedora */
+  display: flex;
+  align-items: center; /* Esto los alinea verticalmente al centro */
+  gap: 15px;  }
 
 .isotipo {
          width: 250px;
@@ -127,16 +131,6 @@ footer {
     margin:auto;
 }
 
-.activador-menu {
-    font-size: 3rem;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: rgb(242, 192, 69);
-    padding-left: 1rem;
-    padding-right: 0.25rem;
-}
-
 .input-busqueda {
     flex: 1;
     padding: 10px 15px;
@@ -151,78 +145,10 @@ footer {
     outline: none;
     border-color: var(--main-color);
     background: rgba(255, 255, 255, 0.8);
-
 }
 
 .buscador {
   padding: 0 25px 0 200px; 
-}
-
-.barra-lateral {
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 250px;
-    height: 100vh;
-    background: #ffffff;
-    z-index: 200;
-    transition: left 0.3s ease;
-    padding: 20px;
-    padding-bottom: 100px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-    overflow-y: auto;
-    overscroll-behavior: contain;
-}
-
-.barra-lateral.open {
-    left: 0;
-}
-
-.cabecera-barra-lateral {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-}
-
-.boton-cerrar {
-    background: none;
-    border: none;
-    color: #aaa;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.nav-barra-lateral {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.boton-nav {
-    background: #000000;
-    color: white;
-    border: none;
-    padding: 12px;
-    text-align: left;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-    text-decoration: none;
-    display: block;
-}
-
-.boton-nav:hover {
-    background: #444;
-    color: var(--main-color);
-}
-
-.divisor-barra-lateral {
-    height: 1px;
-    background: #333;
-    margin: 20px 0;
 }
 
 .icono_carrito {
@@ -348,35 +274,12 @@ footer {
 
 /* --- Estilos de Carrito --- */
 /* Botón Flotante */
-.boton-flotante-carrito {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: var(--main-color);
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    transition: transform 0.2s;
-}
-
-.boton-flotante-carrito:hover {
-    transform: scale(1.1);
-}
 
 .contador-carrito {
     position: absolute;
     top: -5px;
     right: -5px;
     background: white;
-    color: var(--main-color);
     font-size: 12px;
     font-weight: bold;
     border-radius: 50%;
@@ -385,39 +288,40 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--main-color);
 }
 
 .contenedor-sobre-nosotros{
         max-width: 800px;
-        margin:auto;
         color: white;
         text-align: center;
-    }
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+        }
 
     .titulo-sobre-nosotros {
         font-size: 3rem;
-        color: var(--main-color, #e50914);
+        color: rgb(242, 192, 69);
         text-decoration: underline;
 
     }
 
     .texto-sobre-nosotros{
         font-size: 1.2rem;
-        line-height: 1.6;
         color: #ffffff;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        text-align: center;
     }
 
     @media screen and (min-width: 850px){
-       #texto-sobre-nosotros { 
-        font-size: 1.2rem;
-        line-height: 1.6;
-        color: #ffffff;
-        padding-top: 0rem;
+       .contenedor-sobre-nosotros{
+        max-width: 800px;
+        margin:auto;
+        color: white;
+        text-align: center;
+    }   
     }
-}
+
 
   .isotipo_sobrenosotros {
          width: 145px;
@@ -428,13 +332,125 @@ footer {
 }
 
   .logotipo-sobrenosotros {
-        width: 420px;
+        width: 400px;
          height:auto;
          display: block; 
          margin: 0 auto;
          align-items: center;
-         padding-top: 6rem;
-         padding-bottom: 3rem;
+         padding-top: 8rem;
+         padding-bottom: 0rem;
+
 }
 
+/* Oculta el checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Estilos del icono hamburguesa */
+.hamburger {
+  cursor: pointer;
+  width: 35px;  /* Aumentado para que sea más visible */
+  height: 25px; /* Altura suficiente para líneas más gruesas */
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background-color: rgb(242, 192, 69);
+  transition: all 0.3s ease-in-out; /* Animación suave */
+}
+
+/* Estilos del menú de navegación */
+.menu {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+  opacity: 70% ;
+  clip-path: circle(0% at 100% 0%); /* Oculto por defecto */
+  transition: clip-path 0.5s ease-in-out;
+  z-index: 1;
   
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  padding: 15px 0;
+  display: block;
+}
+
+/* Estado cuando el checkbox está marcado (menú abierto) */
+#menu-toggle:checked ~ .menu {
+  clip-path: circle(100% at 100% 0%); /* Se despliega */
+}
+
+/* Animación de las líneas a una 'X' */
+#menu-toggle:checked ~ .hamburger span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#menu-toggle:checked ~ .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked ~ .hamburger span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.contenedor-carrito {
+        max-width: 800px;
+        color: white;
+        text-align: center;
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+        }
+
+.titulo-carrito {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    text-align: center;
+
+}
+
+#final-carrito {
+  text-align: center;
+  
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.isotipo-carrito {
+    width:200px;
+    height:auto;
+    display: block; 
+    margin: 0 auto;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    padding-left:7re ;
+    padding-right: 7rem;
+    
+}

@@ -20,17 +20,35 @@
 
 </header>
 
-  <div class="contenedor-barra-busqueda contenedor-busqueda-cabecera">
-      <button class="activador-menu activador-menu-espaciado" id="activador-menu">&#9776;</button>
-      <input type="text" class="input-busqueda input-busqueda-completo" id="input-busqueda"
-        placeholder="Buscar película...">
-        
+<div class="menu-busqueda">
+
+<input type="checkbox" id="menu-toggle">
+<label for="menu-toggle" class="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+<nav class="menu">
+  <ul>
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Acerca de</a></li>
+    <li><a href="#">Servicios</a></li>
+    <li><a href="#">Contacto</a></li>
+  </ul>
+</nav>
+
+
+<div class="contenedor-barra-busqueda">
+      <input type="text" class="input-busqueda" 
+        placeholder="Buscar película...">  
       <a href="carrito.html" class="icono_carrito" title="Ver Carrito">
       <img src="imagenes/icono_carrito.png" width="40px" height="auto" alt="Cesta de la compra"> 
       <span id="contador-carrito" class="insignia-carrito">0</span>
       </a>
     </div>
-</nav>
+
+</div>
+
 
   <!-- Contenido Principal: Cuadrícula de Películas -->
   <div class="cuadricula-peliculas" id="cuadricula-mascotas">
