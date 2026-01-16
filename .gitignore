@@ -1,2 +1,5 @@
 #IGNORAR 
 .env
+
+node*
+.vscode
