@@ -1,24 +1,51 @@
 
-body{
-    font-family: "poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-family: "poppins", sans-serif;
-    }
-
-
 #contenedor{
   width: 95%;
   max-width: 1300px;
   margin:auto;}
 
+@media screen and (min-width: 850px){
+       article {width: 80%;}
+}
 
-#isotipo {
-         width: 200px;
+
+
+body{
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-family: "poppins", sans-serif;
+    background-color: black;
+    color: #f8f7f5;
+    }
+
+
+
+.isotipo {
+         width: 250px;
          height:auto;
          display: block; 
          margin: 0 auto;
+         align-items: center;
 }
+
+.logotipo {display: none;
+            align-items: center;}
+
+
+@media screen and (min-width: 850px){
+       
+       
+       .logotipo {display: block;
+                  width: 420px;
+                  height:auto;
+                  margin-left: auto;
+                  margin-right: auto;
+                  padding-top: 3rem;
+                  padding-bottom: 4rem;
+      }
+      }
+
 
 #fox {
     float: left;
@@ -83,7 +110,7 @@ body{
   padding-bottom: 1%;
 }
 
-
+/*
 .contenedor-barra-busqueda {
     display: flex;
     align-items: center;
@@ -119,14 +146,14 @@ body{
 }
 
 .buscador {
-  padding: 0 25px 0 200px; /* Padding for other horizontal elements */
+  padding: 0 25px 0 200px; /* Padding for other horizontal elements 
 }
 
 .barra-lateral {
     position: fixed;
     top: 0;
     left: -300px;
-    /* Hidden by default */
+    /* Hidden by default 
     width: 250px;
     height: 100vh;
     background: #000;
@@ -134,11 +161,11 @@ body{
     transition: left 0.3s ease;
     padding: 20px;
     padding-bottom: 100px;
-    /* Ensure content isn't cut off */
+    /* Ensure content isn't cut off 
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
     overscroll-behavior: contain;
-    /* Prevent scroll chaining */
+    /* Prevent scroll chaining
 }
 
 .barra-lateral.open {
@@ -192,7 +219,5 @@ body{
     margin: 20px 0;
 }
 
++/
 
-
-
-@media screen and (min-width:850px)
