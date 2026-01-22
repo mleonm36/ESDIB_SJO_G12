@@ -36,11 +36,6 @@ body{
 
 
 @media screen and (min-width: 850px){
-       
-           align-items: center;}
-
-
-@media screen and (min-width: 850px){
        .isotipo {display: none;}
     
        .logotipo {display: block;
@@ -151,9 +146,8 @@ footer {
     display: flex;
     align-items: center;
     gap: 15px;
-
-    width: 100%;
-    max-width: 600px;
+    width: 95%;
+    
 }
 
 .activador-menu {
@@ -189,15 +183,13 @@ footer {
     font-size: 1rem;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .input-busqueda:focus {
     outline: none;
     border-color: var(--main-color);
-
     background: rgba(0, 0, 0, 0.8);
-
     background: rgba(255, 255, 255, 0.8);
 
 }
@@ -205,11 +197,11 @@ footer {
 .buscador {
   padding: 0 25px 0 200px; /* Padding for other horizontal elements */
   padding: 0 25px 0 200px; 
+  max-width: 95
 
 }
 
 .barra-lateral {
-     /* Hidden by default */
     position: fixed;
     top: 0;
     left: -300px;
@@ -287,8 +279,9 @@ footer {
     cursor: pointer;
     background: none;
     border: none;
-    padding-right: 1rem;
-    padding-left: 0.25rem;}
+    padding-left: 0.25rem;
+    padding-right: 3.5rem;
+    }
 
 #contador-carrito {
      color:#ffffff;
@@ -437,12 +430,12 @@ footer {
 
     }
 
-    .texto-sobre-nosotros{
-        font-size: 1.2rem;
+    .contenedor-sobre-nosotros p {
         color: #ffffff;
         margin-left: 2rem;
         margin-right: 2rem;
-        text-align: center;
+        text-align: justify;
+        font-size: 20px;
     }
 
     @media screen and (min-width: 850px){
@@ -482,13 +475,15 @@ footer {
 /* Estilos del icono hamburguesa */
 .hamburger {
   cursor: pointer;
-  width: 35px;  /* Aumentado para que sea más visible */
+  width: 35px;  
   height: 25px; /* Altura suficiente para líneas más gruesas */
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-left: 3.5rem;
+  padding-right: 0.25rem;
 }
 
 .hamburger span {
@@ -502,40 +497,85 @@ footer {
 
 /* Estilos del menú de navegación */
 .menu {
-  position:absolute;
+  position: fixed; /* Cambiado de absolute a fixed */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  background: #000000;
-  opacity: 70% ;
-  clip-path: circle(0% at 100% 0%); /* Oculto por defecto */
+  height: 100%; /* Cubre toda la ventana */
+  background: rgba(0, 0, 0, 0.85); /* Mejor usar rgba para la opacidad */
+  clip-path: circle(0% at 0% 0%); 
   transition: clip-path 0.5s ease-in-out;
   z-index: 1;
-  
+  overflow-y: auto; 
+  overflow-x: hidden; 
 }
 
 .menu ul {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  align-items: flex-start; 
+  justify-content: flex-start;
   list-style: none;
-  padding: 0;
+  margin: 0;
+  padding-top: 225px; 
+  padding-left: 50px; 
+  padding-bottom: 100px; 
+  font-size: 24px;
+  font-weight: bold; 
 }
 
 .menu li a {
   color: #fff;
   text-decoration: none;
-  font-size: 2em;
   padding: 15px 0;
   display: block;
+  padding: 10px 0;
+  white-space: normal; /* Permite que el texto baje a la siguiente línea si es muy largo */
+  word-wrap: break-word; /* Evita que palabras largas rompan el layout */
+  margin-bottom: 15px; /* Crea una separación uniforme en todo el menú */
 }
+
+.menu li:has(#foro-menu) {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 30px;
+    margin-top: 20px;
+}
+
+#foro-menu, #sobrenosotros-menu { 
+    display: flex;            /* Usa flexbox para centrado total */
+    align-items: center;      /* Centra verticalmente */
+    justify-content: center;   /* Centra horizontalmente */
+    
+    text-align: center;
+    width: 200px;             /* Ancho suficiente para "Sobre nosotros" */
+    height: 80px;             /* Altura fija para que ambos sean iguales */
+    
+    margin-top: 20px;         /* Separación con la lista de arriba */
+    margin-bottom: 10px;      /* Separación entre ellos */
+    border-radius: 8px;
+    
+    text-decoration: none;    /* Quita el subrayado */
+    font-size: 24px;        /* Tamaño de letra equilibrado */
+    white-space: nowrap;      /* ¡IMPORTANTE! Evita que el texto salte de línea */
+    padding: 0 15px;          /* Espacio a los lados para que no toque los bordes */
+}
+
+#foro-menu { 
+    background-color: rgb(166, 23, 27);
+    color: white;     
+    margin-top: 30px;       
+}
+
+#sobrenosotros-menu { 
+    background-color: rgb(242, 192, 69);
+    color: black;            /* Texto negro para mejor contraste con el amarillo */
+}
+
+
 
 /* Estado cuando el checkbox está marcado (menú abierto) */
 #menu-toggle:checked ~ .menu {
-  clip-path: circle(100% at 100% 0%); /* Se despliega */
+  clip-path: circle(150vmax at 0% 0%); 
 }
 
 /* Animación de las líneas a una 'X' */
@@ -552,11 +592,12 @@ footer {
 }
 
 .contenedor-carrito {
-        max-width: 800px;
+        min-width: 850px;;
         color: white;
         text-align: center;
-        padding-left: 3.5rem;
+        padding-left: 0.25rem;
         padding-right: 3.5rem;
+        width: 95%;
         }
 
 .titulo-carrito {
@@ -569,7 +610,6 @@ footer {
 
 #final-carrito {
   text-align: center;
-  
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
