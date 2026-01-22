@@ -8,14 +8,6 @@
        article {width: 80%;}
 }
 
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-=======
->>>>>>> d989f545d7adf07433699850240861356dd166e5
->>>>>>> 10716d09d0b636dbf680c5588f50b8752f7c6ac9
 body{
     font-family: "poppins", sans-serif;
     font-weight: 400;
@@ -25,19 +17,12 @@ body{
     color: #f8f7f5;
     }
 
-<<<<<<< HEAD
  .menu-busqueda { /* O el nombre de tu clase contenedora */
   display: flex;
   align-items: center; /* Esto los alinea verticalmente al centro */
   gap: 15px;  }
 
-=======
-<<<<<<< HEAD
 
-
-=======
->>>>>>> d989f545d7adf07433699850240861356dd166e5
->>>>>>> 10716d09d0b636dbf680c5588f50b8752f7c6ac9
 .isotipo {
          width: 250px;
          height:auto;
@@ -47,20 +32,17 @@ body{
 }
 
 .logotipo {display: none;
-<<<<<<< HEAD
             align-items: center;}
 
 
 @media screen and (min-width: 850px){
        
-=======
            align-items: center;}
 
 
 @media screen and (min-width: 850px){
        .isotipo {display: none;}
->>>>>>> d989f545d7adf07433699850240861356dd166e5
-       
+    
        .logotipo {display: block;
                   width: 420px;
                   height:auto;
@@ -71,12 +53,9 @@ body{
       }
       }
 
-<<<<<<< HEAD
-=======
 article {align-items: center;
           margin-left: auto; 
           margin-right: auto;}
->>>>>>> d989f545d7adf07433699850240861356dd166e5
 
 #fox {
     float: left;
@@ -89,26 +68,18 @@ article {align-items: center;
 
 #titulopelicula { 
                 font-weight: bold;
-<<<<<<< HEAD
                 font-size: 50px;
                 margin-bottom: 0rem;
-=======
                 font-size: 60px;
                 margin-bottom: 0.5rem;
->>>>>>> d989f545d7adf07433699850240861356dd166e5
                 padding-left: 1rem;
                 margin-top: 0rem;
                 padding-top: 0rem;
                 padding-right: 1rem;
-<<<<<<< HEAD
-=======
-                
->>>>>>> d989f545d7adf07433699850240861356dd166e5
       
 }
 
 #director { 
-<<<<<<< HEAD
                 font-size: 25px;
                 margin-bottom: 0rem;
                 margin-top: 0rem;
@@ -117,7 +88,6 @@ article {align-items: center;
 
 #año { 
                 font-size: 25px;
-=======
                 font-size: 35px;
                 margin-bottom: 0rem;
                 margin-top: 0rem;
@@ -127,27 +97,20 @@ article {align-items: center;
 
 #año { 
                 font-size: 35px;
->>>>>>> d989f545d7adf07433699850240861356dd166e5
                 margin-bottom: 0rem;
                 padding-left: 1rem;
 }
 
 #duracion { 
-<<<<<<< HEAD
                 font-size: 25px;
-=======
                 font-size: 35px;
->>>>>>> d989f545d7adf07433699850240861356dd166e5
                 margin-left: 1rem;
                 margin-bottom: 0rem;
                 padding-left: 1rem;
 }
 #generos { 
-<<<<<<< HEAD
                 font-size: 25px;
-=======
                 font-size: 35px;
->>>>>>> d989f545d7adf07433699850240861356dd166e5
                 margin-bottom: 0rem;
                 padding-left: 1rem;
 }
@@ -158,15 +121,10 @@ article {align-items: center;
         flex-wrap: nowrap;
         clear: both;
         text-align: justify;
-<<<<<<< HEAD
-=======
         font-size: 20px;
->>>>>>> d989f545d7adf07433699850240861356dd166e5
         padding-left: 1.5rem;
         padding-bottom: 1rem;
 }
-
-<<<<<<< HEAD
 
 #final {
   background-color: rgb(221, 221, 221);
@@ -175,8 +133,7 @@ article {align-items: center;
   padding-bottom: 1%;
 }
 
-/*
-=======
+
 footer {
     align-items: center;
     margin-left: auto; 
@@ -190,12 +147,11 @@ footer {
   padding-bottom: 1rem;
 }
 
->>>>>>> d989f545d7adf07433699850240861356dd166e5
 .contenedor-barra-busqueda {
     display: flex;
     align-items: center;
     gap: 15px;
-<<<<<<< HEAD
+
     width: 100%;
     max-width: 600px;
 }
@@ -207,14 +163,11 @@ footer {
     border: none;
     color: white;
     padding: 5px;
-=======
     width: 95%;
     max-width: 1300px;
     margin:auto;
 }
 
-<<<<<<< HEAD
-=======
 .activador-menu {
     font-size: 3rem;
     cursor: pointer;
@@ -223,79 +176,59 @@ footer {
     color: rgb(242, 192, 69);
     padding-left: 1rem;
     padding-right: 0.25rem;
->>>>>>> d989f545d7adf07433699850240861356dd166e5
+
 }
 
->>>>>>> 10716d09d0b636dbf680c5588f50b8752f7c6ac9
 .input-busqueda {
     flex: 1;
     padding: 10px 15px;
     border-radius: 4px;
     border: 1px solid #333;
-<<<<<<< HEAD
     background: rgba(0, 0, 0, 0.5);
     color: white;
     font-size: 1rem;
-=======
     background-color: #ffffff;
     color: rgb(0, 0, 0);
-    font-size: zrem;
->>>>>>> d989f545d7adf07433699850240861356dd166e5
+    font-size: 12px;
 }
 
 .input-busqueda:focus {
     outline: none;
     border-color: var(--main-color);
-<<<<<<< HEAD
-    background: rgba(0, 0, 0, 0.8);
-=======
-    background: rgba(255, 255, 255, 0.8);
-<<<<<<< HEAD
-=======
->>>>>>> d989f545d7adf07433699850240861356dd166e5
 
->>>>>>> 10716d09d0b636dbf680c5588f50b8752f7c6ac9
+    background: rgba(0, 0, 0, 0.8);
+
+    background: rgba(255, 255, 255, 0.8);
+
 }
 
 .buscador {
-<<<<<<< HEAD
-  padding: 0 25px 0 200px; /* Padding for other horizontal elements 
-=======
+  padding: 0 25px 0 200px; /* Padding for other horizontal elements */
   padding: 0 25px 0 200px; 
->>>>>>> d989f545d7adf07433699850240861356dd166e5
+
 }
 
-<<<<<<< HEAD
-=======
 .barra-lateral {
+     /* Hidden by default */
     position: fixed;
     top: 0;
     left: -300px;
-<<<<<<< HEAD
-    /* Hidden by default 
     width: 250px;
     height: 100vh;
     background: #000;
-=======
     width: 250px;
     height: 100vh;
     background: #ffffff;
->>>>>>> d989f545d7adf07433699850240861356dd166e5
     z-index: 200;
     transition: left 0.3s ease;
     padding: 20px;
     padding-bottom: 100px;
-<<<<<<< HEAD
-    /* Ensure content isn't cut off 
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
     overscroll-behavior: contain;
-    /* Prevent scroll chaining
-=======
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
     overscroll-behavior: contain;
->>>>>>> d989f545d7adf07433699850240861356dd166e5
 }
 
 .barra-lateral.open {
@@ -326,11 +259,8 @@ footer {
 }
 
 .boton-nav {
-<<<<<<< HEAD
     background: #333;
-=======
     background: #000000;
->>>>>>> d989f545d7adf07433699850240861356dd166e5
     color: white;
     border: none;
     padding: 12px;
@@ -353,11 +283,6 @@ footer {
     margin: 20px 0;
 }
 
-<<<<<<< HEAD
-+/
-
-=======
->>>>>>> 10716d09d0b636dbf680c5588f50b8752f7c6ac9
 .icono_carrito {
     cursor: pointer;
     background: none;
@@ -549,7 +474,6 @@ footer {
 
 }
 
-<<<<<<< HEAD
 /* Oculta el checkbox */
 #menu-toggle {
   display: none;
@@ -662,7 +586,3 @@ footer {
     padding-right: 7rem;
     
 }
-=======
-  
->>>>>>> d989f545d7adf07433699850240861356dd166e5
->>>>>>> 10716d09d0b636dbf680c5588f50b8752f7c6ac9
