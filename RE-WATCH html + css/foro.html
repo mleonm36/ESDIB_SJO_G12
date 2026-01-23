@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro - RE-WATCH</title>
+</head>
+
+<body>
+    <header>
+        <h1>Foro de la Comunidad</h1>
+    </header>
+
+    <main>
+        <section id="nuevo-post">
+            <h2>Crear nueva publicación</h2>
+            <form id="form-post">
+                <input type="text" placeholder="Título del tema" required>
+                <br><br>
+                <textarea placeholder="Escribe tu mensaje aquí..." rows="5" cols="50" required></textarea>
+                <br><br>
+                <button type="submit">Publicar</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="lista-temas">
+            <h2>Temas recientes</h2>
+            <div class="post">
+                <h3>Título de ejemplo</h3>
+                <p>Este es el contenido de una publicación de ejemplo en el foro.</p>
+                <span>Publicado por: Usuario1 | Fecha: 2023-10-27</span>
+            </div>
+            <!-- Aquí se cargarán dinámicamente los posts -->
+        </section>
+    </main>
+</body>
+
+</html>
