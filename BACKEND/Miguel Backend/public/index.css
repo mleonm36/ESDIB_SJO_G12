@@ -1,0 +1,1348 @@
+body{
+   overflow-x: hidden;
+}
+
+
+/* Tipografias y textos */
+h1{
+   text-align: center;
+   font-family: "Anton", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 1000;
+   font-style: normal;
+   font-size: 2rem;
+}
+
+
+h2 {
+   text-align: center;
+   font-family: "Montserrat", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 500;
+   font-style: normal;
+   padding: 1rem;
+}
+
+
+.anton-regular {
+ font-family: "Anton", sans-serif;
+ font-weight: 400;
+ font-style: normal;
+}
+
+
+p{
+   text-align: center;
+   font-family: "Montserrat", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   line-height: 1.7;
+   font-style: normal;
+   font-size: 1.1rem;
+}
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Montserrat", sans-serif;
+   background-color: none;
+}
+
+
+/* Fin de Tipografias y textos */
+
+
+/* Movil */
+
+
+/* Navbar*/
+
+
+header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   box-shadow: 5px 5px 10px #ededed;
+   margin-bottom: 0rem;
+}
+
+
+.logo {
+   max-width: 6rem;
+}
+
+
+.nav-list {
+   list-style-type: none;
+   display: flex;
+   gap: 2rem;
+   padding: 1.3rem;
+}
+
+
+.nav-list li a {
+   text-decoration: none;
+   color: black;
+}
+
+
+.nav-animales { 
+   height: 2.5rem;
+   visibility: visible;
+}
+
+
+.nav-busca {
+   height: 2.5rem;
+   visibility: visible;
+}
+
+
+.nav-adopcion {
+   height: 2.5rem;
+   visibility: visible;
+}
+.nav-adopcion2{
+   visibility: hidden;
+}
+.nav-animales2{
+   visibility: hidden;
+}
+
+
+.nav-busca2{
+   visibility: hidden;
+}
+
+
+.abrir-menu,
+.cerrar-menu{
+   display: none;
+}
+
+
+.desplegable-animales {visibility: hidden;}
+/* Fin de Navbar*/
+
+
+/* Contenido Index Movil */
+
+
+.titulo {
+   font-family: "Anton", sans-serif;
+   font-weight: 100;
+   font-size: 3rem;
+   font-style: normal;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   line-height: 4rem;
+   text-align: left;
+   color: #7ac6be;
+}
+
+
+.inicio {
+   display: flex;
+   flex-direction: column;
+}
+
+
+.texto {
+   padding: 2.5rem;
+   text-align: left;
+   font-size: 1.1rem;
+}
+
+
+.texto2 {
+   display: none;
+   padding: 1.5rem;
+   text-align: left;
+   font-size: 0.9rem;
+}
+
+
+
+.animales {
+   width: 100%;       
+   max-width: 100rem;  
+   height: auto;      
+   object-fit: cover;
+   display: block;
+   position: relative;
+   top: 5px;
+   z-index: -1;
+}
+
+.eslogan {
+   padding: 2rem;
+   font-family: "Anton", sans-serif;
+   text-align: center;          
+   background-color: #7ac6be;      
+   color: white;
+   line-height: 3rem;
+   z-index: 2;
+    font-size: 3rem;
+   padding: 2rem;
+}
+
+.eslogan2 {
+   font-family: "Montserrat", sans-serif;
+   font-style: normal;
+   font-weight: 100%;
+   font-size: 2.5rem;   
+   color: #000000;
+   margin: 2rem;
+   margin-bottom: 0rem;
+   margin-top: 0rem;
+}
+
+.adopta {
+   display: flex;
+   justify-content: center;
+   margin: 20px 0;
+   flex-wrap: wrap;
+   width: 100%;
+   margin-top: 0%;
+}
+
+.adopta img {
+   width: 100%;        /* Se adapta al contenedor */
+   max-width: 25rem;   /* Tamaño máximo en pantallas grandes */
+   height: auto;       /* Mantiene proporción */
+   border-radius: 1rem;
+   padding-top: 2rem;
+   padding-left: 2rem;
+   padding-right: 2rem;
+}
+
+
+.adopta2 {
+   display: none;
+   justify-content: center;
+   margin: 5px 0;
+   flex-wrap: wrap;
+   width: 100%;
+}
+
+
+.adopta2 img {
+   width: 100%;        /* Se adapta al contenedor */
+   max-width: 25rem;   /* Tamaño máximo en pantallas grandes */
+   height: auto;       /* Mantiene proporción */
+   border-radius: 1rem;
+   padding: 1rem;
+}
+
+
+.adopta img:hover {
+   transform: scale(1.03);
+}
+
+
+.mascotas {
+   display: flex;
+   flex-direction: column;
+   align-items: center;  
+   gap: 5px;             
+}
+
+
+
+.busca-familia {
+   padding-left: 2rem;
+   padding-right: 2rem;
+}
+
+.mascotas img {
+   width: 100%;
+   max-width: 25rem;
+   aspect-ratio: 1/1; 
+   object-fit: cover;
+   border-radius: 5rem;
+   filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
+   transition: 0.2s;  
+   padding: 1rem;
+}
+
+
+.redes-sociales {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   padding-right: 1rem;
+   padding-top: 2rem;
+ 
+}
+
+footer {  box-shadow: -5px -5px 10px #e2e2e2;}
+
+
+.logo-footer {
+   display: flex;
+   justify-content: left;
+   height: 2.3rem;
+   margin-left: 2rem;
+}
+
+.mascotas img:hover {
+   transform: scale(1.03);
+}
+
+.video-gato {
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0rem;
+  
+}
+video {
+   display: flex;
+  width: 100%;
+}
+
+.inicio {
+   display: flex;
+   flex-direction: column;
+}
+
+.caja-busca-familia {
+   width: 100%;
+   background-color: #7ac6be;
+   color: white;
+   box-shadow: 5px 5px 15px #7ac6be;
+
+}
+
+.instagram {height: 1rem; margin-right: 1rem;}
+.twitter {height: 1rem; margin-right: 0.9rem;}
+.facebook {height: 1.2rem;}
+
+.item-footer p {font-size: 0.7rem;}
+/* Fin de Contenido Index Movil */
+
+
+/* Fin de Movil */
+
+
+
+
+
+
+/* Escritorio */
+
+
+@media screen and (max-width: 950px) {
+  
+   /* Navbar Escritorio */
+
+
+   .abrir-menu,
+   .cerrar-menu {
+       display: block;
+       border: 0;
+       font-size: 2rem;
+       background-color: transparent;
+       cursor: pointer;
+   }
+
+
+   .nav {
+       opacity: 0;
+       visibility: hidden;
+       display: flex;
+       flex-direction: column;
+       align-items: end;
+       gap: 1.5rem;
+       position: absolute;
+       top: 0;
+       right: 0;
+       bottom: 0rem;
+       padding: 1rem;
+       padding-right: 2rem;
+       box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+       background-color: white;
+   }
+
+
+   .nav.visible {
+       opacity: 0.9;
+       visibility: visible;
+   }
+  
+    .nav-list {
+       flex-direction: column;
+       align-items: end;
+       color: black;
+       align-items: right;
+       padding: 0.5rem;
+   }
+
+
+   .nav-list :hover{
+       color: #fece02;
+   }
+
+   .nav-adopcion2{
+       visibility:visible;
+       font-family: "Montserrat", sans-serif;
+       font-style: normal;
+       font-size: 1rem;
+       text-align: right;
+      
+   }
+   .nav-animales2{
+       visibility: visible;
+       font-family: "Montserrat", sans-serif;
+       font-style: normal;
+       font-size: 1rem;
+       text-align: center;
+   }
+
+   .nav-busca2{
+       visibility: visible;
+       font-family: "Montserrat", sans-serif;
+       font-style: normal;
+       font-size: 1rem;
+       text-align: center;
+   }
+
+   .nav-animales { 
+       visibility: hidden;
+   }
+
+
+   .nav-busca {
+       visibility: hidden;
+   }
+
+
+   .nav-adopcion {
+       visibility: hidden;
+   }
+
+   .desplegable-animales {visibility: visible;}
+
+   /* Fin de Navbar Escritorio */
+
+
+
+
+   /* Contenido Escritorio */
+
+
+
+
+
+
+
+
+
+
+   /* Fin de Contenido Escritorio */
+  
+
+
+}
+
+
+   /* Fin Escritorio */
+
+
+
+
+
+
+
+
+/* Carrusel */
+
+
+.carrusel-wrapper {
+   max-width: 1000px;
+   margin: 0 auto;
+   position: relative;
+}
+
+
+.carrusel{
+   display: flex;
+   overflow-x: hidden;
+   scroll-snap-type: x mandatory;
+   scroll-behavior: smooth;
+   border-radius: .5rem;
+   padding: 20px 0;
+}
+
+
+.carrusel-slide{
+   flex: 1 0 100%;
+   scroll-snap-align: start;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 400px;
+}
+
+
+/* Propiedades imagenes carrusel*/
+.carrusel img{
+   width: 65%;
+   max-width: 400px;
+   aspect-ratio: 1/1;
+   border-radius: 50%;
+   object-fit: cover;
+   display: block;
+}
+
+
+.carrusel-nav{
+   display: flex;
+   column-gap: 1rem;
+   position: absolute;
+   bottom: 0.5px;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 1;
+}
+
+
+.carrusel-nav a{
+   width: .9rem;
+   height: .9rem;
+   border-radius: 80%;
+   background-color: black;
+   opacity: .7;
+   transition: opacity ease 250ms;
+  
+}
+
+.carrusel-nav a:hover{
+   opacity: 1 ;
+}
+
+@media screen and (min-width: 600px) {
+   .texto {
+   font-size: 1.3rem;
+}
+}
+
+@media screen and (min-width: 850px) {
+   .animales{
+       height:  130%;
+       justify-content: left;
+   }
+
+
+.titulo {
+   font-family: "Anton", sans-serif;
+   font-weight: 100;
+   font-size: 6rem;
+   font-style: normal;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   padding-bottom: 3rem;
+   line-height: 6rem;
+   text-align: left;
+   color: #7ac6be;
+}
+
+.texto {
+   font-size: 1.2rem;
+   padding: 2rem;
+   padding-bottom: 0%;
+}
+
+.texto2 {
+   display: flex;
+   font-size: 1.2rem;
+   padding: 2rem;
+}
+
+.adopta2 {
+   display: flex;
+   justify-content: left;
+   padding: 1.4rem;
+   
+}
+
+.adopta{
+   display: none;}
+
+.sobre-nosotros{
+   padding-left: 5rem;
+   padding-right:3rem;
+   padding-top: 2rem;
+}
+
+.inicio{ flex-direction:row-reverse;
+  gap: 2rem;}
+
+
+.eslogan2{
+    display:none;
+    padding: 2rem;
+}
+
+.mascotas {
+   display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.video-gato {width:100%;
+align-items: center;
+align-content: center;}
+
+.caja-gato {
+   align-items: center;
+align-content: center;
+}
+}
+
+
+
+body{
+   overflow-x: hidden;
+}
+
+
+/* Tipografias y textos */
+h1{
+   text-align: center;
+   font-family: "Anton", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 1000;
+   font-style: normal;
+}
+
+
+h2 {
+   text-align: center;
+   font-family: "Montserrat", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 500;
+   font-style: normal;
+   padding: 1rem;
+}
+
+
+.anton-regular {
+ font-family: "Anton", sans-serif;
+ font-weight: 400;
+ font-style: normal;
+}
+
+
+p{
+   text-align: center;
+   font-family: "Montserrat", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   line-height: 1.7;
+   font-style: normal;
+   font-size: 1.1rem;
+}
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Montserrat", sans-serif;
+   background-color: none;
+}
+
+
+/* Fin de Tipografias y textos */
+
+
+/* Movil */
+
+
+/* Navbar*/
+
+
+header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-left: 2rem;
+   padding-right: 2rem;
+
+
+}
+
+
+.logo {
+   max-width: 6rem;
+}
+
+
+.nav-list {
+   list-style-type: none;
+   display: flex;
+   gap: 2rem;
+   padding: 1.3rem;
+}
+
+
+.nav-list li a {
+   text-decoration: none;
+   color: black;
+}
+
+
+.nav-animales { 
+   height: 2.5rem;
+   visibility: visible;
+}
+
+
+.nav-busca {
+   height: 2.5rem;
+   visibility: visible;
+}
+
+
+.nav-adopcion {
+   height: 2.5rem;
+   visibility: visible;
+}
+.nav-adopcion2{
+   visibility: hidden;
+}
+.nav-animales2{
+   visibility: hidden;
+}
+
+
+.nav-busca2{
+   visibility: hidden;
+}
+
+
+.abrir-menu,
+.cerrar-menu{
+   display: none;
+}
+
+
+.desplegable-animales {visibility: hidden;}
+/* Fin de Navbar*/
+
+
+/* Contenido Index Movil */
+
+
+.titulo {
+   font-family: "Anton", sans-serif;
+   font-weight: 100;
+   font-size: 4rem;
+   font-style: normal;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   line-height: 4rem;
+   text-align: left;
+   color: #7ac6be;
+}
+
+
+.inicio {
+   display: flex;
+   flex-direction: column;
+   margin-top: 1.2rem;
+}
+
+
+.texto {
+   padding: 2.5rem;
+   text-align: left;
+   font-size: 1.1rem;
+}
+
+
+.texto2 {
+   display: none;
+   padding: 1.5rem;
+   text-align: left;
+   font-size: 0.9rem;
+}
+
+
+.animales {
+   width: 100%;       
+   max-width: 100rem;  
+   height: auto;      
+   object-fit: cover;
+   display: block;
+   position: relative;
+   top: 5px;
+   z-index: -1;
+}
+
+.eslogan {
+   padding: 2rem;
+   font-family: "Anton", sans-serif;
+   text-align: center;          
+   background-color: #7ac6be;      
+   color: white;
+   line-height: 3rem;
+   z-index: 2;
+    font-size: 3rem;
+   padding: 2rem;
+}
+
+.eslogan2 {
+   font-family: "Montserrat", sans-serif;
+   font-style: normal;
+   font-weight: 100%;
+   font-size: 2.5rem;   
+   color: #000000;
+   margin: 2rem;
+}
+
+.adopta {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: 100%;
+}
+
+.adopta img {
+   width: 100%;
+   max-width: 25rem;
+   height: auto;
+   border-radius: 1rem;}
+
+
+.adopta2 {
+   display: none;
+   justify-content: center;
+   margin: 5px 0;
+   flex-wrap: wrap;
+   width: 100%;
+}
+
+
+.adopta2 img {
+   width: 100%;
+   max-width: 25rem;
+   height: auto;
+   border-radius: 1rem;
+   padding: 1rem;
+}
+
+
+.adopta img:hover {
+   transform: scale(1.03);
+}
+
+
+.mascotas {
+   display: flex;
+   flex-direction: column;
+   align-items: center;  
+   gap: 5px;             
+}
+
+.busca-familia {
+   padding-left: 2rem;
+   padding-right: 2rem;
+}
+
+.mascotas img {
+   width: 100%;
+   max-width: 25rem;
+   height: auto;
+   border-radius: 5rem;
+   filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
+   transition: 0.2s;  
+   padding: 2rem;
+}
+
+
+.redes-sociales {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   padding-right: 1rem;
+   padding-top: 2rem;
+ 
+}
+
+footer {  box-shadow: -5px -5px 10px #e2e2e2;}
+
+
+.logo-footer {
+   display: flex;
+   justify-content: left;
+   height: 2.3rem;
+   margin-left: 2rem;
+}
+
+.mascotas img:hover {
+   transform: scale(1.03);
+}
+
+
+/* Fin de Contenido Index Movil */
+
+
+/* Fin de Movil */
+
+
+
+
+
+
+/* Escritorio */
+
+
+@media screen and (max-width: 950px) {
+  
+   /* Navbar Escritorio */
+
+
+   .abrir-menu,
+   .cerrar-menu {
+       display: block;
+       border: 0;
+       font-size: 2rem;
+       background-color: transparent;
+       cursor: pointer;
+   }
+
+
+   .nav {
+       opacity: 0;
+       visibility: hidden;
+       display: flex;
+       flex-direction: column;
+       align-items: end;
+       gap: 1.5rem;
+       position: absolute;
+       top: 0;
+       right: 0;
+       bottom: 0rem;
+       padding: 1rem;
+       padding-right: 2rem;
+       box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+       background-color: white;
+   }
+
+
+   .nav.visible {
+       opacity: 0.9;
+       visibility: visible;
+   }
+  
+    .nav-list {
+       flex-direction: column;
+       align-items: end;
+       color: black;
+       align-items: right;
+       padding: 0.5rem;
+   }
+
+
+   .nav-list :hover{
+       color: #fece02;
+   }
+
+   .nav-adopcion2{
+       visibility:visible;
+       font-family: "Montserrat", sans-serif;
+       font-style: normal;
+       font-size: 1rem;
+       text-align: right;
+      
+   }
+   .nav-animales2{
+       visibility: visible;
+       font-family: "Montserrat", sans-serif;
+       font-style: normal;
+       font-size: 1rem;
+       text-align: center;
+   }
+
+   .nav-busca2{
+       visibility: visible;
+       font-family: "Montserrat", sans-serif;
+       font-style: normal;
+       font-size: 1rem;
+       text-align: center;
+   }
+
+   .nav-animales { 
+       visibility: hidden;
+   }
+
+
+   .nav-busca {
+       visibility: hidden;
+   }
+
+
+   .nav-adopcion {
+       visibility: hidden;
+   }
+
+   .desplegable-animales {visibility: visible;}
+
+   /* Fin de Navbar Escritorio */
+
+
+
+
+   /* Contenido Escritorio */
+
+
+
+
+
+
+
+
+
+
+   /* Fin de Contenido Escritorio */
+  
+
+
+}
+
+
+   /* Fin Escritorio */
+
+
+
+
+
+
+
+
+/* Carrusel */
+
+
+.carrusel-wrapper {
+   max-width: 1000px;
+   margin: 0 auto;
+   position: relative;
+}
+
+
+.carrusel{
+   display: flex;
+   overflow-x: hidden;
+   scroll-snap-type: x mandatory;
+   scroll-behavior: smooth;
+   border-radius: .5rem;
+   padding: 20px 0;
+}
+
+
+.carrusel-slide{
+   flex: 1 0 100%;
+   scroll-snap-align: start;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 400px;
+}
+
+
+/* Propiedades imagenes carrusel*/
+.carrusel img{
+   width: 65%;
+   max-width: 400px;
+   aspect-ratio: 1/1;
+   border-radius: 50%;
+   object-fit: cover;
+   display: block;
+}
+
+
+.carrusel-nav{
+   display: flex;
+   column-gap: 1rem;
+   position: absolute;
+   bottom: 0.5px;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 1;
+}
+
+
+.carrusel-nav a{
+   width: .9rem;
+   height: .9rem;
+   border-radius: 80%;
+   background-color: black;
+   opacity: .7;
+   transition: opacity ease 250ms;
+  
+}
+
+.carrusel-nav a:hover{
+   opacity: 1 ;
+}
+
+@media screen and (min-width: 600px) {
+   .texto {
+   font-size: 1.3rem;
+}
+}
+
+@media screen and (min-width: 850px) {
+   .animales{
+       height:  130%;
+       justify-content: left;
+   }
+
+   .inicio {
+       flex-direction:row-reverse;
+       margin-top: 0rem;
+}
+
+.titulo {
+   font-family: "Anton", sans-serif;
+   font-weight: 100;
+   font-size: 6rem;
+   font-style: normal;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   padding-bottom: 2rem;
+   line-height: 6rem;
+   text-align: left;
+   color: #7ac6be;
+}
+
+.texto {
+   font-size: 1.2rem;
+   padding: 2rem;
+   padding-bottom: 0%;
+   padding-top: 0%;
+}
+
+.texto2 {
+   display: flex;
+   font-size: 1.2rem;
+   padding: 2rem;
+}
+
+.adopta2 {
+   display: flex;
+   justify-content: left;
+   padding: 1.4rem;
+   padding-top: 0.9rem;
+}
+
+.adopta{
+   display: none;}
+
+.sobre-nosotros{
+   padding-bottom: 0rem;
+   padding-left: 0rem;
+   padding-right:2rem;
+}
+
+.inicio{
+   align-items: start;}
+
+
+.eslogan2{
+    display:none;
+    padding: 2rem;
+}
+
+.mascotas {
+   display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+}
+
+/* Carrusel */
+
+.slider {
+	width: 100%;
+}
+.slider input {
+	display: none;
+}
+.testimonials {
+	justify-self: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	min-height: 350px;
+	perspective: 1px;
+	overflow: hidden;
+	width: 100%
+}
+.testimonials .item {
+	width: 100%;
+	padding: 61px;
+	border-radius: 5px;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	transition: transform 0.4s;
+	user-select: none;
+	cursor: pointer;
+}
+.testimonials .item img {
+	width: 80%;
+	height: 80%;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 13px solid #ffa500;
+}
+.testimonials .item p {
+	color: #ddd;
+}
+.testimonials .item h2 {
+	font-size: 14px;
+}
+
+/* Flechas del carrusel */
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  color: black;
+  font-size: 2rem;
+  border-radius: 50%;
+  padding: 0.6rem;
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.slide-arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+  left: 44px;
+}
+
+.next {
+  right: 44px;
+
+/* Mueve la tarjeta que está 2 posiciones a la derecha del centro. La aleja y la gira para dar efecto 3D.
+z-index:2 → queda detrás del centro y de las tarjetas cercanas. */
+}
+#t-1:checked ~ .testimonials label[for="t-3"],
+#t-2:checked ~ .testimonials label[for="t-4"],
+#t-3:checked ~ .testimonials label[for="t-5"],
+#t-4:checked ~ .testimonials label[for="t-1"],
+#t-5:checked ~ .testimonials label[for="t-2"] {
+	transform: translate3d(600px, 0, -180px) rotateY(-25deg);
+	z-index: 2;
+
+
+
+
+/* Mueve la tarjeta justo a la derecha del centro. Más cerca que la lejana y con giro menor.
+z-index:3 → delante de la lejana, pero detrás del centro. */
+
+}
+#t-1:checked ~ .testimonials label[for="t-2"],
+#t-2:checked ~ .testimonials label[for="t-3"],
+#t-3:checked ~ .testimonials label[for="t-4"],
+#t-4:checked ~ .testimonials label[for="t-5"],
+#t-5:checked ~ .testimonials label[for="t-1"] {
+	transform: translate3d(300px, 0, -90px) rotateY(-15deg);
+	z-index: 3;
+
+
+
+
+
+/* Mueve la tarjeta justo a la izquierda del centro.Misma distancia que la derecha cercana pero hacia la izquierda.
+z-index:3 → delante de las lejanas, detrás del centro. */
+}
+#t-2:checked ~ .testimonials label[for="t-1"],
+#t-3:checked ~ .testimonials label[for="t-2"],
+#t-4:checked ~ .testimonials label[for="t-3"],
+#t-5:checked ~ .testimonials label[for="t-4"],
+#t-1:checked ~ .testimonials label[for="t-5"] {
+	transform: translate3d(-300px, 0, -90px) rotateY(15deg);
+	z-index: 3;
+
+
+
+
+
+/* Mueve la tarjeta que está 2 posiciones a la izquierda del centro.Lejana, girada hacia la derecha.
+z-index no se define → queda detrás de todas las demás. */
+
+}
+#t-3:checked ~ .testimonials label[for="t-1"],
+#t-4:checked ~ .testimonials label[for="t-2"],
+#t-5:checked ~ .testimonials label[for="t-3"],
+#t-2:checked ~ .testimonials label[for="t-5"],
+#t-1:checked ~ .testimonials label[for="t-4"] {
+	transform: translate3d(-600px, 0, -180px) rotateY(25deg);
+
+
+   /*Tarjeta correspondiente al input seleccionado. z-index:4 → siempre delante de todo.
+   No tiene transform → se queda en el centro del carrusel.  */
+
+}
+#t-1:checked ~ .testimonials label[for="t-1"],
+#t-2:checked ~ .testimonials label[for="t-2"],
+#t-3:checked ~ .testimonials label[for="t-3"],
+#t-4:checked ~ .testimonials label[for="t-4"],
+#t-5:checked ~ .testimonials label[for="t-4"],
+#t-5:checked ~ .testimonials label[for="t-5"] {
+	z-index: 4;
+}
+
+@media (min-width: 768px){
+	.testimonials .item {
+		width: 435px;
+		padding: 61px;
+		border-radius: 5px;
+	}
+
+	.testimonials {
+	min-height: 350px;
+	perspective: 2103px;
+	width: 840px
+	}
+
+   .slide-arrow {
+   top: 10%;
+   font-size: 30px;
+   visibility: hidden;
+}
+
+
+   .prev {
+   left: 0px;
+}
+
+   .next {
+   right: 0px;
+}
+   #slide-arrow-next {
+   right: -250px;
+}
+}
