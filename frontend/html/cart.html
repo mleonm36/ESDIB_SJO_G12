@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-watch - Carrito</title>
+    <link href="../css/normalize.css" rel="stylesheet" />
+    <link href="../css/estilos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/ogs1bry.css" />
+    <style>
+        .cart-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            min-height: 60vh;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cart-item img {
+            width: 80px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .cart-item-price {
+            color: rgb(242, 192, 69);
+            font-weight: bold;
+        }
+
+        .cart-total-section {
+            text-align: right;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cart-total-label {
+            font-size: 1.5rem;
+            color: #aaa;
+        }
+
+        #cart-total {
+            font-size: 2rem;
+            color: rgb(242, 192, 69);
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .checkout-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 40px;
+            background: rgb(242, 192, 69);
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            transition: background 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .checkout-btn:hover {
+            background: rgb(255, 210, 100);
+        }
+
+        .remove-item {
+            cursor: pointer;
+            color: #e50914;
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: transform 0.2s, color 0.2s;
+            user-select: none;
+        }
+
+        .remove-item:hover {
+            transform: scale(1.2);
+            color: #ff1a1a;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.8); 
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: #222;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #444;
+            width: 90%; 
+            max-width: 400px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ong-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .ong-btn {
+            padding: 12px;
+            background-color: #333;
+            color: white;
+            border: 1px solid #555;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+
+        .ong-btn:hover {
+            background-color: rgb(242, 192, 69);
+            color: black;
+            font-weight: bold;
+        }
+
+        .close-modal {
+            background: transparent;
+            color: #aaa;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            text-decoration: underline;
+        }
+    </style>
+    <style>
+        @media (max-width: 600px) {
+            .cart-total-section {
+                text-align: center; /* Center content */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cart-total-label, #cart-total {
+                font-size: 1.2rem;
+            }
+
+            .checkout-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logotipo">
+            <img src="../imagenes/Identidad visual re-watch-01.svg">
+        </a>
+
+        <a href="index.html" class="isotipo">
+            <img src="../imagenes/rewatchisotipoblanco.svg">
+        </a>
+    </header>
+
+    <div class="menu-busqueda">
+        <input type="checkbox" id="menu-toggle">
+        <div class="header-left-group">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="store.html?genre=Acción">Acción</a></li>
+                <li><a href="store.html?genre=Animación">Animación</a></li>
+                <li><a href="store.html?genre=Anime">Anime</a></li>
+                <li><a href="store.html?genre=Ciencia ficción">Ciencia ficción</a></li>
+                <li><a href="store.html?genre=Comedia">Comedia</a></li>
+                <li><a href="store.html?genre=Drama">Drama</a></li>
+                <li><a href="store.html?genre=Españolas">Españolas</a></li>
+                <li><a href="store.html?genre=Independientes">Independientes</a></li>
+                <li><a href="store.html?genre=Musicales">Musicales</a></li>
+                <li><a href="store.html?genre=Romance">Romance</a></li>
+                <li><a href="store.html?genre=Terror">Terror</a></li>
+                <li><a href="store.html?genre=Thriller">Thriller</a></li>
+                <li id="foro-menu"><a href="forum.html">Foro</a></li>
+                <li id="sobrenosotros-menu"><a href="about.html">Sobre nosotros</a></li>
+                <li id="add-movie-menu"><a href="add_movie.html">Añadir Película</a></li>
+            </ul>
+        </nav>
+
+        <div id="genre-header-title">CESTA DE LA COMPRA</div>
+
+        <!-- Container for header tools (without search bar as requested) -->
+        <div class="contenedor-barra-busqueda">
+            <a href="cart.html" class="icono_carrito" title="Ver Carrito">
+                <img src="../imagenes/icono_carrito.png" width="40px" height="auto" alt="Cesta de la compra">
+                <span id="cart-count" class="insignia-carrito" style="display:none;">0</span>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="cart-container">
+        <div id="cart-items">
+            <!-- Items will be loaded here by app.js -->
+            <p style="text-align:center; color:#666;">Cargando productos...</p>
+        </div>
+
+        <div class="cart-total-section">
+            <span class="cart-total-label">Subtotal:</span>
+            <span id="cart-total">0.00 €</span>
+            <br>
+            <button id="checkout-btn" class="checkout-btn">FINALIZAR COMPRA</button>
+        </div>
+    </div>
+
+    <div id="ong-modal" class="modal">
+        <div class="modal-content">
+            <h2 style="margin-top:0">Listado de ONGs</h2>
+            <div class="ong-buttons">
+                <button class="ong-btn" onclick="finalizeWithOng('Fundación Shambhala')">Fundación Shambhala</button>
+                <button class="ong-btn" onclick="finalizeWithOng('Tercer sector')">Tercer sector</button>
+                <button class="ong-btn" onclick="finalizeWithOng('Fundación Amaranta')">Fundación Amaranta</button>
+                <button class="ong-btn" onclick="finalizeWithOng('Fundación Monti Sion')">Fundación Monti Sion</button>
+                <button class="ong-btn" onclick="finalizeWithOng('HOPE')">HOPE</button>
+                <button class="ong-btn" onclick="finalizeWithOng('Fundación Pere Tarrés')">Fundación Pere Tarrés</button>
+                <button class="ong-btn" onclick="finalizeWithOng('Acción por un mundo mejor')">Acción por un mundo mejor</button>
+            </div>
+            <button class="close-modal" onclick="closeOngModal()">Cancelar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p id="final-carrito">Con cada compra realizada con nosotros estarás ayudando solidariamente destinando un 15%
+            del precio de compra a una ONG a elegir por el usuario, gracias por elegir Re-watch.</p>
+        <a href="index.html" class="isotipo-carrito">
+            <img src="../imagenes/rewatchisotipoblanco.svg">
+        </a>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

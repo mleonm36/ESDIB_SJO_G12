@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-watch - Añadir Película</title>
+    <link href="../css/normalize.css" rel="stylesheet" />
+    <link href="../css/estilos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/ogs1bry.css" />
+    <style>
+        /* Form Specific Styles */
+        .form-container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            background: #1f1f1f;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+
+        .form-title {
+            font-size: 2rem;
+            color: var(--main-color, rgb(242, 192, 69));
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #ccc;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            background: #333;
+            border: 1px solid #444;
+            border-radius: 4px;
+            color: white;
+            font-size: 1rem;
+            box-sizing: border-box; /* Ensure padding doesn't affect width */
+            font-family: inherit;
+        }
+
+        /* Enforce same height for single line inputs and selects */
+        .form-group input:not([type="file"]), 
+        .form-group select {
+            height: 50px;
+        }
+
+        /* Standardize placeholder opacity and size just in case */
+        ::placeholder {
+            color: #aaa;
+            opacity: 1; /* Firefox */
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--main-color, rgb(242, 192, 69));
+        }
+
+        /* File input adjustment */
+        .form-group input[type="file"] {
+            padding: 10px;
+            background: #2a2a2a;
+        }
+
+        .submit-btn {
+            background: rgb(242, 192, 69);
+            color: black;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: rgb(255, 210, 100);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logotipo">
+            <img src="../imagenes/Identidad visual re-watch-01.svg">
+        </a>
+
+        <a href="index.html" class="isotipo">
+            <img src="../imagenes/rewatchisotipoblanco.svg">
+        </a>
+    </header>
+
+    <div class="menu-busqueda">
+        <input type="checkbox" id="menu-toggle">
+        <div class="header-left-group">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="store.html?genre=Acción">Acción</a></li>
+                <li><a href="store.html?genre=Animación">Animación</a></li>
+                <li><a href="store.html?genre=Anime">Anime</a></li>
+                <li><a href="store.html?genre=Ciencia ficción">Ciencia ficción</a></li>
+                <li><a href="store.html?genre=Comedia">Comedia</a></li>
+                <li><a href="store.html?genre=Drama">Drama</a></li>
+                <li><a href="store.html?genre=Españolas">Españolas</a></li>
+                <li><a href="store.html?genre=Independientes">Independientes</a></li>
+                <li><a href="store.html?genre=Musicales">Musicales</a></li>
+                <li><a href="store.html?genre=Romance">Romance</a></li>
+                <li><a href="store.html?genre=Terror">Terror</a></li>
+                <li><a href="store.html?genre=Thriller">Thriller</a></li>
+                <li id="foro-menu"><a href="forum.html">Foro</a></li>
+                <li id="sobrenosotros-menu"><a href="about.html">Sobre nosotros</a></li>
+                <li id="add-movie-menu"><a href="add_movie.html">Añadir Película</a></li>
+            </ul>
+        </nav>
+
+        <div class="contenedor-barra-busqueda">
+            <a href="cart.html" class="icono_carrito" title="Ver Carrito">
+                <img src="../imagenes/icono_carrito.png" width="40px" height="auto" alt="Cesta de la compra">
+                <span id="cart-count" class="insignia-carrito" style="display:none;">0</span>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="form-container">
+        <h1 class="form-title">Añadir Nueva Película</h1>
+        <form id="add-movie-form">
+            <div class="form-group">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" name="titulo" required placeholder="Ej: Matrix">
+            </div>
+
+            <div class="form-group">
+                <label for="genero">Género</label>
+                <select id="genero" name="genero" required>
+                    <option value="">Selecciona un género</option>
+                    <option value="Acción">Acción</option>
+                    <option value="Animación">Animación</option>
+                    <option value="Anime">Anime</option>
+                    <option value="Ciencia ficción">Ciencia ficción</option>
+                    <option value="Comedia">Comedia</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Españolas">Españolas</option>
+                    <option value="Independientes">Independientes</option>
+                    <option value="Musicales">Musicales</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Thriller">Thriller</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="director">Director</label>
+                <input type="text" id="director" name="director" placeholder="Ej: Hermanas Wachowski">
+            </div>
+
+            <div class="form-group">
+                <label for="ano">Año</label>
+                <input type="number" id="ano" name="ano" required placeholder="Ej: 1999" min="1900" max="2100">
+            </div>
+
+            <div class="form-group">
+                <label for="duracion_input">Duración (minutos)</label>
+                <input type="text" id="duracion_input" name="duracion" placeholder="Ej: 136 min">
+            </div>
+
+            <div class="form-group">
+                <label for="precio">Precio (€)</label>
+                <input type="number" id="precio" name="precio" step="0.01" placeholder="Ej: 9.99">
+            </div>
+
+            <div class="form-group">
+                <label for="sinopsis">Sinopsis</label>
+                <textarea id="sinopsis" name="sinopsis" rows="4"
+                    placeholder="Breve descripción de la película..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="poster">Póster (Imagen)</label>
+                <input type="file" id="poster" name="poster" accept="image/*">
+            </div>
+
+            <button type="submit" class="submit-btn" id="submit-btn">Añadir Película</button>
+        </form>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/add_movie.js"></script>
+</body>
+
+</html>

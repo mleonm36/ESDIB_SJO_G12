@@ -1,0 +1,189 @@
+/* Inherit base styles from style-upload.css */
+
+/* Premium Dark Theme */
+.forum-container {
+    max-width: 900px;
+    margin: 60px auto;
+    background: linear-gradient(145deg, #1e1e1e 0%, #141414 100%);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.forum-title {
+    text-align: center;
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--text-color);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Styling */
+.formulario {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.input_container {
+    margin-bottom: 20px;
+}
+
+.input_container label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.input_container input,
+.input_container textarea {
+    width: 100%;
+    background: #0f0f0f;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 6px;
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+    /* Fix padding issues */
+}
+
+.input_container input:focus,
+.input_container textarea:focus {
+    outline: none;
+    border-color: var(--main-color);
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.2);
+}
+
+.input_container_button {
+    text-align: right;
+    margin-top: 10px;
+}
+
+#post-button {
+    background: var(--main-color);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    text-transform: uppercase;
+}
+
+#post-button:hover {
+    background-color: #f40612;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+}
+
+/* Comments List */
+.comments-list {
+    list-style: none;
+    margin-top: 40px;
+    padding: 0;
+}
+
+.comment-item {
+    background: linear-gradient(to right, #252525, #1f1f1f);
+    border-radius: 6px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--main-color);
+    transition: transform 0.2s;
+}
+
+.comment-item:hover {
+    transform: translateX(5px);
+    background: #2a2a2a;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between; /* Desktop: Split ends */
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 600px) {
+    .comment-header {
+        flex-direction: column; /* Mobile: Stacked */
+        align-items: center; /* Center everything */
+        gap: 5px;
+    }
+    
+    .comment-date {
+        font-size: 0.8rem;
+        color: #888;
+        text-align: center;
+        display: block; /* Force block display for proper centering */
+        width: 100%;
+    }
+    
+    .comment-author {
+        font-size: 1rem;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        justify-content: center; /* Center flex content */
+        width: 100%;
+        display: block; /* Force block display */
+        text-align: center; /* Center the text */
+    }
+
+    /* Hide the avatar spacer on mobile to allow perfect text centering */
+    .comment-author::before {
+        display: none;
+    }
+    
+    .comment-text {
+        text-align: justify; 
+    }
+    
+    .input_container_button {
+        text-align: center; 
+    }
+}
+
+.comment-author {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Reduced gap so author stays more to the left */
+}
+
+/* Mock avatar circle */
+.comment-author::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.comment-date {
+    font-size: 0.85em;
+    color: #666;
+}
+
+.comment-text {
+    font-size: 1.05em;
+    color: #ddd;
+    line-height: 1.5;
+}

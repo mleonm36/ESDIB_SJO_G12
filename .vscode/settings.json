@@ -1,4 +1,8 @@
 {
-    "chat.agent.enabled": false,
-    "liveServer.settings.port": 5501
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/77d972b8-f8bf-45ba-af9f-fa3ee19942b3/resourceGroups/EASDIB/providers/Microsoft.Web/sites/re-watch",
+    "appService.deploySubpath": "."
 }

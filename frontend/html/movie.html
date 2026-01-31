@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-watch - Película</title>
+    <link href="../css/normalize.css" rel="stylesheet" />
+    <link href="../css/estilos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/ogs1bry.css" />
+    <style>
+        .detail-container {
+            display: flex;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 40px;
+            gap: 50px;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .poster-section {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .poster-section img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .info-section {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .movie-title-large {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            line-height: 1.1;
+            color: white;
+        }
+
+        .meta-row {
+            display: flex;
+            gap: 20px;
+            font-size: 1.1rem;
+            color: #aaa;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        .meta-tag {
+            border: 1px solid #aaa;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 24px; /* Fixed height for consistency */
+            line-height: 1; /* Reset line height */
+        }
+
+        .synopsis {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            color: #ddd;
+            text-align: justify;
+        }
+
+        .credits {
+            margin-bottom: 40px;
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .credits span {
+            color: white;
+            font-weight: bold;
+        }
+
+        .actions {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-large {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background-color: rgb(242, 192, 69);
+            color: black;
+        }
+
+        .btn-primary:hover {
+            background-color: rgb(255, 210, 100);
+        }
+
+        .back-arrow {
+            font-size: 2.5rem;
+            color: rgb(242, 192, 69) !important;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s;
+        }
+
+        .back-arrow:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <style>
+        /* Responsive adjustments for Movie Details */
+        @media (max-width: 768px) {
+            .detail-container {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .poster-section {
+                width: 100%;
+                max-width: 280px; /* Limit poster size */
+                margin: 0 auto;
+                order: -1; /* Ensure poster is on top */
+                display: flex;
+                justify-content: center;
+            }
+
+            .info-section {
+                width: 100%;
+                text-align: center;
+                align-items: center;
+            }
+
+            .movie-title-large {
+                font-size: 2rem;
+                margin-top: 10px;
+            }
+
+            .meta-row {
+                justify-content: center;
+                flex-wrap: wrap; /* Allow wrapping */
+                gap: 15px;
+                font-size: 0.9rem; /* Smaller font */
+            }
+            
+            .meta-tag, #detail-year, #detail-duration {
+                white-space: nowrap;
+            }
+
+            .synopsis {
+                font-size: 1rem;
+                text-align: justify; /* Justify text on mobile */
+            }
+
+            .credits {
+                text-align: center;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logotipo">
+            <img src="../imagenes/Identidad visual re-watch-01.svg">
+        </a>
+
+        <a href="index.html" class="isotipo">
+            <img src="../imagenes/rewatchisotipoblanco.svg">
+        </a>
+    </header>
+
+    <div class="menu-busqueda">
+        <input type="checkbox" id="menu-toggle">
+        <div class="header-left-group">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="store.html?genre=Acción">Acción</a></li>
+                <li><a href="store.html?genre=Animación">Animación</a></li>
+                <li><a href="store.html?genre=Anime">Anime</a></li>
+                <li><a href="store.html?genre=Ciencia ficción">Ciencia ficción</a></li>
+                <li><a href="store.html?genre=Comedia">Comedia</a></li>
+                <li><a href="store.html?genre=Drama">Drama</a></li>
+                <li><a href="store.html?genre=Españolas">Españolas</a></li>
+                <li><a href="store.html?genre=Independientes">Independientes</a></li>
+                <li><a href="store.html?genre=Musicales">Musicales</a></li>
+                <li><a href="store.html?genre=Romance">Romance</a></li>
+                <li><a href="store.html?genre=Terror">Terror</a></li>
+                <li><a href="store.html?genre=Thriller">Thriller</a></li>
+                <li id="foro-menu"><a href="forum.html">Foro</a></li>
+                <li id="sobrenosotros-menu"><a href="about.html">Sobre nosotros</a></li>
+                <li id="add-movie-menu"><a href="add_movie.html">Añadir Película</a></li>
+            </ul>
+        </nav>
+
+        <div class="contenedor-barra-busqueda">
+            <a href="cart.html" class="icono_carrito" title="Ver Carrito">
+                <img src="../imagenes/icono_carrito.png" width="40px" height="auto" alt="Cesta de la compra">
+                <span id="cart-count" class="insignia-carrito" style="display:none;">0</span>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="detail-container">
+        <div class="poster-section">
+            <img id="detail-poster" src="" alt="Poster">
+        </div>
+        <div class="info-section">
+            <h1 class="movie-title-large" id="detail-title">Cargando...</h1>
+
+            <div class="meta-row">
+                <span id="detail-year"></span>
+                <span class="meta-tag" id="detail-duration"></span>
+                <span style="color:rgb(242, 192, 69); font-weight:bold; font-size:1.3rem;" id="detail-price"></span>
+                <span id="detail-genre-container"><a href="#" id="detail-genre-link"
+                        style="color: rgb(242, 192, 69); text-decoration: none;"><span
+                            id="detail-genre"></span></a></span>
+            </div>
+
+            <p class="synopsis" id="detail-synopsis"></p>
+
+            <div class="credits">
+                <p>Director: <span id="detail-director"></span></p>
+                <p>Géneros: <span id="detail-subgenres"></span></p>
+            </div>
+
+            <div class="actions">
+                <button class="btn-large btn-primary" id="add-cart-btn">
+                    🛒 AÑADIR AL CARRITO
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/movie.js"></script>
+</body>
+
+</html>

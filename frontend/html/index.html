@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Re-watch</title>
+  <link href="../css/normalize.css?v=2" rel="stylesheet" />
+  <link href="../css/estilos.css?v=2" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.typekit.net/ogs1bry.css" />
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logotipo">
+      <img src="../imagenes/Identidad visual re-watch-01.svg">
+    </a>
+
+    <a href="index.html" class="isotipo">
+      <img src="../imagenes/rewatchisotipoblanco.svg">
+    </a>
+
+  </header>
+
+  <div class="menu-busqueda">
+
+    <input type="checkbox" id="menu-toggle">
+    <div class="header-left-group">
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="store.html?genre=Acción">Acción</a></li>
+        <li><a href="store.html?genre=Animación">Animación</a></li>
+        <li><a href="store.html?genre=Anime">Anime</a></li>
+        <li><a href="store.html?genre=Ciencia ficción">Ciencia ficción</a></li>
+        <li><a href="store.html?genre=Comedia">Comedia</a></li>
+        <li><a href="store.html?genre=Drama">Drama</a></li>
+        <li><a href="store.html?genre=Españolas">Españolas</a></li>
+        <li><a href="store.html?genre=Independientes">Independientes</a></li>
+        <li><a href="store.html?genre=Musicales">Musicales</a></li>
+        <li><a href="store.html?genre=Romance">Romance</a></li>
+        <li><a href="store.html?genre=Terror">Terror</a></li>
+        <li><a href="store.html?genre=Thriller">Thriller</a></li>
+        <li id="foro-menu"><a href="forum.html">Foro</a></li>
+        <li id="sobrenosotros-menu"><a href="about.html">Sobre nosotros</a></li>
+        <li id="add-movie-menu"><a href="add_movie.html">Añadir película</a></li>
+      </ul>
+    </nav>
+
+
+    <div class="contenedor-barra-busqueda">
+      <input type="text" id="search-input" class="input-busqueda" placeholder="Buscar película...">
+      <a href="cart.html" class="icono_carrito" title="Ver Carrito">
+        <img src="../imagenes/icono_carrito.png" width="40px" height="auto" alt="Cesta de la compra">
+        <span id="cart-count" class="insignia-carrito" style="display:none;">0</span>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Main Content: Movie Grid -->
+  <div class="movies-grid" id="movies-grid">
+    <!-- Movies will be loaded here by app.js -->
+    <p style="color:#666; width:100%; text-align:center;">Cargando películas...</p>
+  </div>
+
+  <script>console.log('HTML cargado, esperando a app.js...');</script>
+  <script src="../js/app.js?v=2"></script>
+</body>
+
+</html>

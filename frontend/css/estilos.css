@@ -1,0 +1,897 @@
+#contenedor {
+  width: 95%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+@media screen and (min-width: 850px) {
+  article {
+    width: 80%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: black;
+  color: #f8f7f5;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-busqueda {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 10px 20px; /* Reduced padding for mobile optimization */
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+.header-left-group {
+  display: flex;
+  align-items: center;
+}
+
+#genre-header-title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  #genre-header-title {
+    font-size: 1rem; /* Smaller font for mobile */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 60%; /* Prevent overlap with icons */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.isotipo {
+  width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.logotipo {
+  display: none;
+  align-items: center;
+}
+
+@media screen and (min-width: 850px) {
+  .isotipo {
+    display: none;
+  }
+
+  .logotipo {
+    display: block;
+    width: 420px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+}
+
+article {
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#fox {
+  float: left;
+  margin: 0rem 1rem 0rem 2rem;
+  width: 300px;
+  height: auto;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+}
+
+#titulopelicula {
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 0rem;
+  font-size: 60px;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  margin-top: 0rem;
+  padding-top: 0rem;
+  padding-right: 1rem;
+}
+
+#director {
+  font-size: 25px;
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+  padding-left: 1rem;
+}
+
+#año {
+  font-size: 25px;
+  font-size: 35px;
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+  padding-left: 1rem;
+}
+
+#año {
+  font-size: 35px;
+  margin-bottom: 0rem;
+  padding-left: 1rem;
+}
+
+#duracion {
+  font-size: 25px;
+  font-size: 35px;
+  margin-left: 1rem;
+  margin-bottom: 0rem;
+  padding-left: 1rem;
+}
+
+#generos {
+  font-size: 25px;
+  font-size: 35px;
+  margin-bottom: 0rem;
+  padding-left: 1rem;
+}
+
+#sinopsis {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  clear: both;
+  text-align: justify;
+  font-size: 20px;
+  padding-left: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+#final {
+  background-color: rgb(221, 221, 221);
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+footer {
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#final {
+  background-color: rgb(62, 62, 62);
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.contenedor-barra-busqueda {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
+  /* Empuja el contenido (buscador y carrito) a la derecha */
+  flex: 1;
+  /* Ocupa el espacio restante */
+}
+
+.activador-menu {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+  padding: 5px;
+  width: 95%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.activador-menu {
+  font-size: 3rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: rgb(242, 192, 69);
+  padding-left: 1rem;
+  padding-right: 0.25rem;
+}
+
+.input-busqueda {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+.input-busqueda:focus {
+  outline: none;
+  border-color: var(--main-color);
+  background: rgba(0, 0, 0, 0.8);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.buscador {
+  padding: 0 25px 0 200px;
+  /* Padding for other horizontal elements */
+  padding: 0 25px 0 200px;
+  max-width: 95;
+}
+
+.barra-lateral {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 250px;
+  height: 100vh;
+  background: #000;
+  width: 250px;
+  height: 100vh;
+  background: #ffffff;
+  z-index: 200;
+  transition: left 0.3s ease;
+  padding: 20px;
+  padding-bottom: 100px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.barra-lateral.open {
+  left: 0;
+}
+
+.cabecera-barra-lateral {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.boton-cerrar {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-barra-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.boton-nav {
+  background: #333;
+  background: #000000;
+  color: white;
+  border: none;
+  padding: 12px;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  display: block;
+}
+
+.boton-nav:hover {
+  background: #444;
+  color: var(--main-color);
+}
+
+.divisor-barra-lateral {
+  height: 1px;
+  background: #333;
+  margin: 20px 0;
+}
+
+.icono_carrito {
+  position: relative;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* Align icon to the right of its container */
+  width: 45px;
+  height: 45px;
+}
+
+#contador-carrito,
+#cart-count {
+  color: #ffffff;
+  background: rgb(242, 192, 69);
+  color: black;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+/* Cuadrícula de Películas */
+.cuadricula-peliculas {
+  display: grid;
+  /* 4 columnas */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 40px;
+}
+
+/* Ajustes Responsive */
+@media (max-width: 1200px) {
+  .cuadricula-peliculas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cuadricula-peliculas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cuadricula-peliculas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.tarjeta-pelicula {
+  position: relative;
+  transition: transform 0.3s;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #222;
+}
+
+.tarjeta-pelicula:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.poster-pelicula {
+  width: 100%;
+  height: 450px;
+  /* Altura mayor para proporciones de póster */
+  object-fit: cover;
+  display: block;
+}
+
+.info-pelicula {
+  padding: 10px;
+}
+
+.titulo-pelicula {
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Superposición para cerrar menú */
+.superposicion-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 150;
+  display: none;
+}
+
+.superposicion-menu.open {
+  display: block;
+}
+
+/* Título de la Barra Lateral */
+.titulo-menu {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Utilidades Flex de Cabecera */
+.contenedor-busqueda-cabecera {
+  flex: 1;
+  max-width: none;
+  justify-content: space-between;
+}
+
+.activador-menu-espaciado {
+  margin-right: 15px;
+}
+
+.input-busqueda-completo {
+  width: 100%;
+}
+
+.mensaje-cargando {
+  color: #666;
+  width: 100%;
+  text-align: center;
+}
+
+/* --- Estilos de Carrito --- */
+/* Botón Flotante */
+
+.contador-carrito {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor-sobre-nosotros {
+  max-width: 800px;
+  color: white;
+  text-align: center;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+.titulo-sobre-nosotros {
+  font-size: 3rem;
+  color: rgb(242, 192, 69);
+  text-decoration: underline;
+}
+
+.contenedor-sobre-nosotros p {
+  color: #ffffff;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  text-align: justify;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 850px) {
+  .contenedor-sobre-nosotros {
+    max-width: 800px;
+    margin: auto;
+    color: white;
+    text-align: center;
+  }
+}
+
+.isotipo_sobrenosotros {
+  width: 145px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.logotipo-sobrenosotros {
+  width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  align-items: center;
+  padding-top: 8rem;
+  padding-bottom: 0rem;
+}
+
+/* Oculta el checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Estilos del icono hamburguesa */
+.hamburger {
+  cursor: pointer;
+  width: 35px;
+  height: 25px;
+  position: relative;
+  z-index: 200; /* Increased to be above menu (z-index 100) */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background-color: rgb(242, 192, 69);
+  transition: all 0.3s ease-in-out;
+  /* Animación suave */
+}
+
+/* Estilos del menú de navegación */
+.menu {
+  position: fixed;
+  /* Cambiado de absolute a fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Cubre toda la ventana */
+  background: rgba(0, 0, 0, 0.85);
+  /* Mejor usar rgba para la opacidad */
+  clip-path: circle(0% at 0% 0%);
+  transition: clip-path 0.5s ease-in-out;
+  z-index: 100;
+  overscroll-behavior: contain; /* Prevents scroll chaining to body */;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding-top: 225px;
+  padding-left: 50px;
+  padding-bottom: 100px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.menu li:has(#foro-menu) {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 30px;
+  margin-top: 20px;
+}
+
+#foro-menu,
+#sobrenosotros-menu,
+#add-movie-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 200px;
+  height: 120px !important;
+  margin-top: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  white-space: nowrap;
+  padding: 0 15px;
+}
+
+#foro-menu a,
+#sobrenosotros-menu a,
+#add-movie-menu a {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 100%;
+}
+
+#foro-menu {
+  background-color: rgb(166, 23, 27);
+  color: white;
+  margin-top: 20px;
+}
+
+#sobrenosotros-menu {
+  background-color: rgb(242, 192, 69);
+  color: black;
+  /* Texto negro para mejor contraste con el amarillo */
+}
+
+#add-movie-menu {
+  background-color: rgb(40, 167, 69); /* Green color */
+  color: white;
+}
+
+/* Modificación para el scroll y mascara del menú */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  clip-path: circle(0% at 0% 0%);
+  transition: clip-path 0.5s ease-in-out;
+  z-index: 100; /* Increased z-index */
+  overflow: hidden; /* Main container does not scroll */
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding-top: 300px; /* Starts way below the cross */
+  padding-left: 50px;
+  padding-bottom: 100px;
+  font-size: 24px;
+  font-weight: bold;
+  /* Move scroll to UL and mask top */
+  height: 100vh;
+  overflow-y: auto;
+  width: 100%;
+  /* Mask: transparent at top (0-250px) to clear the cross fully, then fade in */
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 250px,
+    black 350px
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 250px,
+    black 350px
+  );
+}
+
+/* Estado cuando el checkbox está marcado (menú abierto) */
+#menu-toggle:checked ~ .menu {
+  clip-path: circle(150vmax at 0% 0%);
+}
+
+#menu-toggle:checked ~ .header-left-group .hamburger span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#menu-toggle:checked ~ .header-left-group .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked ~ .header-left-group .hamburger span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.contenedor-carrito {
+  min-width: 850px;
+  color: white;
+  text-align: center;
+  padding-left: 0.25rem;
+  padding-right: 3.5rem;
+  width: 95%;
+}
+
+.titulo-carrito {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  #genre-header-title {
+    font-size: 1.3rem; /* Increased size (was 1rem) */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: 70%; /* Increased width allowance */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.isotipo-carrito {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Ensure centering */
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+#final-carrito {
+  text-align: justify; /* Justified text */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Movies Grid - for app.js */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .movies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .movies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .movies-grid,
+  .cuadricula-peliculas {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .isotipo {
+    margin-left: auto;
+    margin-right: auto;
+    transform: none; /* Remove any transformative shifting */
+  }
+
+  /* Prevent horizontal scroll */
+  body,
+  html {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Fix search bar and cart icon layout on mobile */
+  .menu-busqueda {
+    padding: 10px 10px; /* Reduced horizontal padding */
+    gap: 8px; /* Reduced gap */
+  }
+
+  .contenedor-barra-busqueda {
+    gap: 8px; /* Reduced gap between search and cart */
+    flex-shrink: 1; /* Allow container to shrink */
+    min-width: 0; /* Allow flexbox to shrink below content size */
+  }
+
+  .input-busqueda {
+    flex: 1;
+    min-width: 0; /* Allow input to shrink */
+    max-width: calc(100vw - 120px); /* Ensure space for hamburger + cart */
+    font-size: 13px; /* Slightly smaller font */
+    padding: 8px 10px; /* Reduced padding */
+  }
+
+  .icono_carrito {
+    flex-shrink: 0; /* Prevent cart icon from shrinking */
+    min-width: 40px; /* Ensure minimum width */
+    width: 40px;
+    height: 40px;
+  }
+
+  .icono_carrito img {
+    width: 35px !important; /* Slightly smaller on mobile */
+    height: auto !important;
+  }
+}
+
+.movie-card {
+  position: relative;
+  transition: transform 0.3s;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #222;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-info {
+  padding: 10px;
+}
+
+.movie-title {
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(242, 192, 69);
+  color: black;
+  padding: 16px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    bottom 0.3s ease;
+  pointer-events: none;
+  max-width: 90%;
+  text-align: center;
+}
+
+.toast.show {
+  opacity: 1;
+  bottom: 50px;
+}

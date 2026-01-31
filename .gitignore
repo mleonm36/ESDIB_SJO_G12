@@ -1,5 +1,0 @@
-#IGNORAR 
-.env
-
-node*
-.vscode
